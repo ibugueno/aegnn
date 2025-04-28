@@ -42,6 +42,8 @@ To efficiently train the graph neural networks, the event graph is generated off
 specific instructions about the data structure and data pre-processing, please refer to the 
 [dataset's readme](aegnn/datasets/README.md).
 
+CUDA_VISIBLE_DEVICES=0 python scripts/0_preprocessing.py --dataset ncaltech101 --num-workers 2
+
 ### Training
 We use the [PyTorch Lightning](https://www.pytorchlightning.ai/) for training and [WandB](https://wandb.ai/) for
 logging. By default, the logs are stored in `/data/logs/`, this can be changed by setting the `AEGNN_LOG_DIR` 
